@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Previsão do Tempo para {{ city }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="forecastData">
+  <ion-list>
+    <ion-item *ngFor="let forecast of forecastData">
+      <ion-label>
+        <h2>Data: {{ forecast.dt_txt | dateFormat }}</h2>
+        <p [appTempColor]="forecast.main.temp">Temperatura: {{ forecast.main.temp }} °C</p>
+        <p>Clima: {{ forecast.weather[0].description | weatherTranslate }}</p>
+        <p>Humidade: {{ forecast.main.humidity }}%</p>
+        <p>Velocidade do Vento: {{ forecast.wind.speed | windSpeed }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-content *ngIf="!forecastData">
+  <p>Nenhuma previsão disponível.</p>
+</ion-content>

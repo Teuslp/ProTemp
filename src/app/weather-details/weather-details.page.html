@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalhes do Clima</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="weatherData">
+    <h2>{{ weatherData.name }}</h2>
+    <p>Temperatura: {{ weatherData.main.temp }}°C</p>
+    <p>Clima: {{ weatherData.weather[0].description }}</p>
+    <p>Humidade: {{ weatherData.main.humidity }}%</p>
+    <p>Velocidade do Vento: {{ weatherData.wind.speed }} m/s</p>
+  </div>
+</ion-content>

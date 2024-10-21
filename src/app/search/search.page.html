@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Buscar Clima</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Cidade</ion-label>
+    <ion-input [(ngModel)]="city" type="text"></ion-input>
+  </ion-item>
+
+  <ion-button expand="full" (click)="searchWeather()">Buscar</ion-button>
+
+  <div *ngIf="weatherData">
+    <h2>{{ weatherData.name }}</h2>
+    <p>Temperatura: {{ weatherData.main.temp }}°C</p>
+    <p>Clima: {{ weatherData.weather[0].description }}</p>
+
+    <!-- Botão existente para ver detalhes -->
+    <ion-button expand="full" [routerLink]="['/weather-details']" [state]="weatherData">Ver Detalhes</ion-button>
+
+    <!-- Novo botão para ver previsão do tempo -->
+    <ion-button expand="full" [routerLink]="['/forecast', city]">
+      Ver Previsão
+    </ion-button>
+  </div>
+</ion-content>
