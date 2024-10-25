@@ -5,6 +5,7 @@ import { DateFormatPipe } from '../pipes/date-format.pipe';
 import { WeatherTranslatePipe } from '../pipes/weather-translate.pipe';
 import { WindSpeedPipe } from '../pipes/wind-speed.pipe';
 import { TempColorDirective } from '../directives/temp-color.directive';
+import { WeatherTooltipDirective } from '../directives/weather-tooltip.directive';
 
 import { IonicModule } from '@ionic/angular';
 
@@ -19,6 +20,7 @@ import { ForecastPage } from './forecast.page';
     IonicModule,
     ForecastPageRoutingModule
   ],
-  declarations: [ForecastPage, DateFormatPipe, WeatherTranslatePipe, WindSpeedPipe, TempColorDirective]
+  declarations: [ForecastPage, DateFormatPipe, WeatherTranslatePipe, 
+    WindSpeedPipe, TempColorDirective, WeatherTooltipDirective]
 })
 export class ForecastPageModule {}
