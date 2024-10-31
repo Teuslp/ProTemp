@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-weather-details',
@@ -9,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 export class WeatherDetailsPage implements OnInit {
   weatherData: any;
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, private location: Location) {}
 
   ngOnInit() {
     // Recebendo os dados passados pela rota
@@ -21,5 +22,10 @@ export class WeatherDetailsPage implements OnInit {
     console.log(this.weatherData); // Verifique se os dados estão chegando corretamente
 
   }
+
+  voltar(){
+    this.location.back();
+  }
+
 }
 

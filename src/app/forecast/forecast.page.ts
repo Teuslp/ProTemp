@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { WeatherService } from '../services/weather.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-forecast',
@@ -11,7 +12,9 @@ export class ForecastPage implements OnInit {
   city: string = '';
   forecastData: any = null;
 
-  constructor(private weatherService: WeatherService, private route: ActivatedRoute) {}
+  constructor(private weatherService: WeatherService, private route: ActivatedRoute,
+    private location: Location
+  ) {}
 
   ngOnInit() {
     // Captura o parâmetro de cidade da rota
@@ -32,4 +35,9 @@ export class ForecastPage implements OnInit {
       }
     );
   }
+
+  voltar() {
+    this.location.back();
+  }
+
 }

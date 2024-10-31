@@ -11,11 +11,12 @@
         <h2>Data: {{ forecast.dt_txt | dateFormat }}</h2>
         <p [appTempColor]="forecast.main.temp">Temperatura: {{ forecast.main.temp }} °C</p>
         <p appWeatherTooltip="Céu limpo e sem nuvens durante todo o dia">Clima: {{ forecast.weather[0].description | weatherTranslate }}</p>
-        <p>Humidade: {{ forecast.main.humidity }}%</p>
+        <p>Umidade: {{ forecast.main.humidity }}%</p>
         <p>Velocidade do Vento: {{ forecast.wind.speed | windSpeed }}</p>
       </ion-label>
     </ion-item>
   </ion-list>
+  <ion-button class="button" (click)="voltar()">Voltar</ion-button>
 </ion-content>
 
 <ion-content *ngIf="!forecastData">
