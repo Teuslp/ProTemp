@@ -1,20 +1,21 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title>ProTemp</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <h1>Bem-vindo ao ProTemp!</h1>
+  <p>Com este app, você pode:</p>
+  <ul>
+    <li>Buscar o clima atual da sua cidade</li>
+    <li>Ver detalhes específicos do clima</li>
+    <li>Acompanhar a previsão do tempo para os próximos dias</li>
+  </ul>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <!-- Botões de Navegação -->
+  <ion-button expand="block" routerLink="/search">
+    Buscar Clima
+  </ion-button>
+
 </ion-content>
