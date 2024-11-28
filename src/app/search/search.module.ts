@@ -15,7 +15,7 @@ import { SearchPage } from './search.page';
     FormsModule,
     IonicModule,
     SearchPageRoutingModule,
-    RouterModule
+    RouterModule,
   ],
   declarations: [SearchPage]
 })

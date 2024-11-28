@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+
 import { DateFormatPipe } from '../pipes/date-format.pipe';
 import { WeatherTranslatePipe } from '../pipes/weather-translate.pipe';
 import { WindSpeedPipe } from '../pipes/wind-speed.pipe';
 import { TempColorDirective } from '../directives/temp-color.directive';
-import { WeatherTooltipDirective } from '../directives/weather-tooltip.directive';
+import { ScrollIntoViewDirective } from '../directives/scroll-into-view.directive';
 
 import { IonicModule } from '@ionic/angular';
 
@@ -21,6 +22,6 @@ import { ForecastPage } from './forecast.page';
     ForecastPageRoutingModule
   ],
   declarations: [ForecastPage, DateFormatPipe, WeatherTranslatePipe, 
-    WindSpeedPipe, TempColorDirective, WeatherTooltipDirective]
+    WindSpeedPipe, TempColorDirective, ScrollIntoViewDirective]
 })
 export class ForecastPageModule {}

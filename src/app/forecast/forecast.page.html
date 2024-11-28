@@ -6,7 +6,7 @@
 
 <ion-content *ngIf="forecastData">
   <ion-list>
-    <ion-item *ngFor="let forecast of forecastData">
+    <ion-item *ngFor="let forecast of forecastData" appScrollIntoView>
       <ion-label>
         <h2>Data: {{ forecast.dt_txt | dateFormat }}</h2>
         <p [appTempColor]="forecast.main.temp">Temperatura: {{ forecast.main.temp }} °C</p>

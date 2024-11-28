@@ -17,6 +17,7 @@
     <p>Temperatura: {{ weatherData.main.temp }}°C</p>
     <p>Clima: {{ weatherData.weather[0].description }}</p>
 
+
     <!-- Botão existente para ver detalhes -->
     <ion-button expand="full" [routerLink]="['/weather-details']" [state]="weatherData">Ver Detalhes</ion-button>
 
